@@ -8,7 +8,7 @@ After contending with a particularly interesting WordPress compromise, we wanted
 
 The earliest reference to this campaign we could discover was on 27 May 2022 by Twitter user @unmaskparasites:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Another variation of Indonesian gambling spam injection via a fake WordPress plugin wp-content/mu-plugins/wp-ultimate-cache-compatibily.php<br>hxxp://173.82[.]206[.]72/ops/1.txt is the source of the hidden spam links <a href="https://t.co/xsla4A1L7O">pic.twitter.com/xsla4A1L7O</a></p>&mdash; Denis (@unmaskparasites) <a href="https://twitter.com/unmaskparasites/status/1530296554451415040?ref_src=twsrc%5Etfw">May 27, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Another variation of Indonesian gambling spam injection via a fake WordPress plugin wp-content/mu-plugins/wp-ultimate-cache-compatibily.php<br>hxxp://173.82[.]206[.]72/ops/1.txt is the source of the hidden spam links <a href="https://t.co/xsla4A1L7O">pic.twitter.com/xsla4A1L7O</a></p>&mdash; Denis (@unmaskparasites) <a href="https://twitter.com/unmaskparasites/status/1530296554451415040?ref_src=twsrc%5Etfw">May 27, 2022</a></blockquote>
 
 ## Campaign Scope and Scale
 
