@@ -28,17 +28,20 @@ Gambling is technically illegal in Indonesia, however online gambling is incredi
 
 ## Compromise Details
 
-Initial access appears to follow patterns listed in [this](https://noc.org/articles/what-hackers-do-with-wordpress-in-2022-post-hack-analysis) article about common WordPress attacks. Following that, attackers are uploading an obfuscated version of the [ALFA TEAM web shell](https://blog.sucuri.net/2020/11/alfa-team-shell-v4-1-tesla-a-feature-update-analysis.html). The obfuscation is performed by gzipping/base64 encoding the PHP code, and then using eval() to decompress and execute the code on access, meaning that the cleartext web shell never touches the filesystem.
+Initial access appears to follow patterns listed in [this](https://noc.org/articles/what-hackers-do-with-wordpress-in-2022-post-hack-analysis) article about common WordPress attacks. Following that, attackers are uploading an obfuscated version of the [ALFA TEAM web shell](https://blog.sucuri.net/2020/11/alfa-team-shell-v4-1-tesla-a-feature-update-analysis.html). The obfuscation is performed by gzipping/base64 encoding the PHP code, and then using `eval()` to decompress and execute the code on access, meaning that the cleartext web shell never touches the filesystem.
 
 ![Base64 encoded PHP gunzipped](img/gzinflate.png)
+
 _Initial PHP Dropper using `eval()` and `gzinflate()` to produce at-runtime PHP_
 
 The penultimate loader shows an author signature of "Solevisible." This connects to ALFA TEAM, which was active in 2020 on YouTube and Telegram. The Telegram channel is still up and the web shell is available for download.
 
 ![Solevisible signature](img/solevisible.png)
+
 _Solevisible signature on pre-loader_
 
 ![ALFA TEAM Telegram group](img/telegram.png)
+
 _ALFA TEAM Telegram Group_
 
 After full deobfuscation, the Alfa Web Shell is plain: 
@@ -53,12 +56,15 @@ ALFA TEAM is a known web exploit developer, and this web shell has some very adv
  
 
 ![cpanel-1](img/cpanel1.png)
+
 _Fake cPanel login page_
 
 ![cpanel-2](img/cpanel2.png)
+
 _Fake page is configured to "fail" 3 times to confirm password capture_
 
 ![cpanel-3](img/cpanel3.png)
+
 _Alfa Shell captures the creds_
 
 Now this demo is for cPanel, but this technique could also be used to attempt capture of SSO credentials from unwitting users. It's important to remember that not all WordPress operators are system administrators by training, so the attack possibility space is quite vast.
